@@ -11,32 +11,44 @@
       </div>
     </div>
 
-    <div class="nav-list lg:flex hidden justify-between font-bold gap-5">
-      <span>
-        <a routerLink="/product" routerLinkActive="active">Products</a>
-      </span>
+    <!-- Hamburger menu for mobile devices -->
+    <button (click)="toggleMenu()"
+            class="lg:hidden flex flex-col justify-center items-center w-10 h-10 p-1 rounded-full hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-      <span>
-        <a routerLink="/about" routerLinkActive="active">About us</a>
-      </span>
+    <!-- Navigation menu -->
+    <div [ngClass]="{'hidden':!isMenuOpen}"
+         class="nav-list lg:flex flex-col lg:flex-row justify-between font-bold gap-5 lg:items-center absolute lg:relative top-full lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-[#09071A] lg:bg-transparent p-5 lg:p-0 shadow-md lg:shadow-none">
+      <div class="lg:flex lg:flex-row grid gap-3">
+        <span>
+          <a routerLink="/product" routerLinkActive="active">Products</a>
+        </span>
 
-      <span>
-        <a routerLink="/support" routerLinkActive="active">Support</a>
-      </span>
+        <span>
+          <a routerLink="/about" routerLinkActive="active">About us</a>
+        </span>
 
-      <span>
-        <a routerLink="/company" routerLinkActive="active">Company</a>
-      </span>
-    </div>
+        <span>
+          <a routerLink="/support" routerLinkActive="active">Support</a>
+        </span>
 
-    <div class="auth-btn flex justify-between gap-5 font-bold">
-      <span class="sign-in">
-        <a routerLink="/sign-in" routerLinkActive="active">Sign in</a>
-      </span>
+        <span>
+          <a routerLink="/company" routerLinkActive="active">Company</a>
+        </span>
+      </div>
 
-      <span class="get-started py-1 px-2 rounded-full text-sm bg-[#4B42E5]">
-        <a routerLink="/get-started" routerLinkActive="active">Get started</a>
-      </span>
+      <!-- Auth menu -->
+      <div class="auth-btn lg:flex lg:ml-80 justify-between gap-5 font-bold lg:mt-0 mt-10">
+        <span class="sign-in">
+          <a routerLink="/sign-in" routerLinkActive="active">Sign in</a>
+        </span>
+
+        <span class="get-started py-1 px-2 rounded-full lg:ml-0 ml-3 text-sm bg-[#4B42E5]">
+          <a routerLink="/get-started" routerLinkActive="active">Get started</a>
+        </span>
+      </div>
+
     </div>
 
   </div>
