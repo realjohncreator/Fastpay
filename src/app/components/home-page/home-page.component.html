@@ -47,8 +47,25 @@
 
   <!--  Video section starts-->
   <div class="flex justify-center items-center my-24">
-    <iframe width="1300" height="600" class="rounded-3xl" [src]='safeURL' allowfullscreen></iframe>
-    <td>
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      preload="auto"
+      width="640"
+      height="264"
+      poster="MY_VIDEO_POSTER.jpg"
+      data-setup="{}"
+    >
+      <source
+        src="./assets/NET%206%20&%20EF%20Core%20🚀%20ALL%20Relationships%20(1_1,%201_n,%20n_n)%20with%20Entity%20Framework%20Core%206%20&%20SQL%20Server.mp4"
+        type="video/mp4"/>
+      <!--      <source src="MY_VIDEO.webm" type="video/webm"/>-->
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
   </div>
   <!--  Video section ends-->
 
