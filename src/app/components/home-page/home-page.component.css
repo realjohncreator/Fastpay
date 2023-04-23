@@ -5,3 +5,7 @@ span {
 hr {
   background: #474453;
 }
+
+.video-js {
+  border-radius: 5%;
+}
