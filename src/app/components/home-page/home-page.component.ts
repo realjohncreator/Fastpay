@@ -7,11 +7,7 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
   styleUrls: ["./home-page.component.css"]
 })
 export class HomePageComponent implements OnInit {
-  public safeURL: SafeResourceUrl;
-
-  constructor(private _sanitizer: DomSanitizer) {
-    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/o_joulYVndM");
-    // this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl("./assets/TypeScript Tutorial for Beginners.mp4");
+  constructor() {
   }
 
   ngOnInit(): void {
